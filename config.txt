@@ -1,0 +1,8 @@
+inputPathMp3 = C:\\Users\\Dewmith Akalanka\\Documents\\NetBeansProjects\\convertor-app\\source\\mp4Tomp3\\input.mp4
+inputPathMkv = C:\\Users\\Dewmith Akalanka\\Documents\\NetBeansProjects\\convertor-app\\source\\mp4Tomkv\\input.mp4
+inputPathFlv = C:\\Users\\Dewmith Akalanka\\Documents\\NetBeansProjects\\convertor-app\\source\\mp4Tomkv\\input.mp4
+
+
+outputPathMp3 = C:\\Users\\Dewmith Akalanka\\Documents\\NetBeansProjects\\convertor-app\\output\\mp4Tomp3-coverted\\Audio.mp3
+outputPathMkv = C:\\Users\\Dewmith Akalanka\\Documents\\NetBeansProjects\\convertor-app\\output\\mp4Tomkv-coverted\\VideoOutMkv.mkv
+outputPathFlv = C:\\Users\\Dewmith Akalanka\\Documents\\NetBeansProjects\\convertor-app\\output\\mp4Tomkv-coverted\\VideoOutFlv.flv

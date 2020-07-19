@@ -32,7 +32,7 @@ public class Mp4toMp3 {
         
         
        System.out.println("Started.....");
-       File Audio = new File ("C:\\Users\\Dewmith Akalanka\\Documents\\NetBeansProjects\\convertor-app\\output\\mp4Tomp3-coverted\\Audio.mp3");
+       File Audio = new File (p.getProperty("outputPathMp3"));
        AudioAttributes audio = new AudioAttributes();
        audio.setCodec("libmp3lame");
        audio.setBitRate(12800);

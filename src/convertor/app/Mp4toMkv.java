@@ -8,7 +8,10 @@ package convertor.app;
 import it.sauronsoftware.jave.*;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
 
 
 
@@ -22,9 +25,14 @@ public class Mp4toMkv {
     
     
         public static void ConvertMp4toMkv(File video) throws  IOException  {
+            
+            
+            Properties p = new Properties();
+            InputStream is = new FileInputStream("config.txt");
+            p.load(is); 
 
             System.out.println("Started.....");
-            File VideoOut = new File ("C:\\\\Users\\\\Dewmith Akalanka\\\\Documents\\\\NetBeansProjects\\\\convertor-app\\\\output\\\\mp4Tomkv-coverted\\\\VideoOutMkv.mkv");
+            File VideoOut = new File (p.getProperty("outputPathMkv"));
 
        
             //VideoEncoding

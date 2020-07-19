@@ -7,6 +7,7 @@ package convertor.app;
 
 
 import java.io.*;
+import java.util.Properties;
 
 
 
@@ -18,22 +19,24 @@ public class ConvertorApp {
 
     /**
      * @param args the command line arguments
-     * @throws java.lang.Exception
+     * @throws java.io.IOException
      */
     public static void main(String[] args) throws IOException  {
        
 
               
-        
-        
-              File VideoMp3 = new File("C:\\\\Users\\\\Dewmith Akalanka\\\\Documents\\\\NetBeansProjects\\\\convertor-app\\\\source\\\\mp4Tomp3\\\\input.mp4");
-              Mp4toMp3.ConvertMp4toMp3(VideoMp3);
-                  
-              File VideoMkv = new File("C:\\\\Users\\\\Dewmith Akalanka\\\\Documents\\\\NetBeansProjects\\\\convertor-app\\\\source\\\\mp4Tomkv\\\\input.mp4");
-              Mp4toMkv.ConvertMp4toMkv(VideoMkv);
+            Properties p = new Properties();
+            InputStream is = new FileInputStream("config.txt");
+            p.load(is); 
 
-              File VideoFlv = new File("C:\\\\Users\\\\Dewmith Akalanka\\\\Documents\\\\NetBeansProjects\\\\convertor-app\\\\source\\\\mp4Toflv\\\\input.mp4");
-              Mp4toFlv.ConvertMp4toFlv(VideoFlv);
+	    File VideoMp3 = new File(p.getProperty("inputPathMp3"));
+            Mp4toMp3.ConvertMp4toMp3(VideoMp3);
+                  
+            File VideoMkv = new File(p.getProperty("inputPathMkv"));
+            Mp4toMkv.ConvertMp4toMkv(VideoMkv);
+
+            File VideoFlv = new File(p.getProperty("inputPathFlv"));
+            Mp4toFlv.ConvertMp4toFlv(VideoFlv);
               
 
     }
